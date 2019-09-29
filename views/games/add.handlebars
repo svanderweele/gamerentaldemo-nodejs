@@ -1,0 +1,10 @@
+<div class="card card-body">
+    <h3>New Game</h3>
+    <form method="POST" action="/games/add">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" value="{{name}}">
+        </div>
+        <input type="submit" value="Create" class="btn btn-primary btn-block">
+    </form>
+</div>

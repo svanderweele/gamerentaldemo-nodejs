@@ -1,0 +1,17 @@
+{{#each games}}
+<div class="card text-center mb-3">
+    <div class="card-header font-weight-bold">
+        {{name}}
+    </div>
+    <div class="card-body">
+        <a href="/games/edit/{{id}}" class="btn btn-primary btn-block mb-2">Edit</a>
+        <form method="POST" action="/games/{{id}}?_method=DELETE">
+            <input type="submit" class="btn btn-danger btn-block" value="Delete" />
+        </form>
+    </div>
+</div>
+{{else}}
+<div class="jumbotron">
+    <p>No games found for user</p>
+</div>
+{{/each}}

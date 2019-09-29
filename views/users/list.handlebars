@@ -1,0 +1,24 @@
+{{#each users}}
+<div class="card text-center mb-3">
+    <div class="card-header font-weight-bold">
+        {{name}}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{occupation}}</h5>
+        <p class="card-text">{{age}}</p>
+        <a href="/users/edit/{{id}}" class="btn btn-primary btn-block mb-2">Edit</a>
+        <form method="POST" action="/users/{{id}}?_method=DELETE">
+            <input type="submit" class="btn btn-danger btn-block" value="Delete User"/>
+        </form>
+    </div>
+    <div class="card-footer text-muted">
+        {{#if lastLoginString}}
+        Last login {{lastLoginString}}
+        {{else}}
+        Never logged in
+        {{/if}}
+    </div>
+</div>
+{{else}}
+<p>There are no users</p>
+{{/each}}
