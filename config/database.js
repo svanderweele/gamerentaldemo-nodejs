@@ -1,13 +1,12 @@
-var development = process.env.NODE_ENV !== "production";
+
+var development = process.env.NODE_ENV !== 'production';
 if (!development) {
   module.exports = {
     mongoURI:
-      "mongodb+srv://Simon:mypassword123@cluster0-n4iai.gcp.mongodb.net/test?retryWrites=true&w=majority"
+      "mongodb://Simon:mypassword123@cluster0-shard-00-00-n4iai.gcp.mongodb.net:27017,cluster0-shard-00-01-n4iai.gcp.mongodb.net:27017,cluster0-shard-00-02-n4iai.gcp.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority"
   };
 } else {
   module.exports = {
-    mongoURI:
-      "mongodb+srv://Simon:mypassword123@cluster0-n4iai.gcp.mongodb.net/test?retryWrites=true&w=majority"
-    // mongoURI: "mongodb://localhost/nodejscrashcoursedb"
+      mongoURI:"mongodb://localhost/nodejscrashcoursedb"
   };
 }
