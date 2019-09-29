@@ -6,6 +6,8 @@ if (!development) {
   };
 } else {
   module.exports = {
-    mongoURI: "mongodb://localhost/nodejscrashcoursedb"
+    mongoURI:
+      "mongodb+srv://Simon:mypassword123@cluster0-n4iai.gcp.mongodb.net/test?retryWrites=true&w=majority"
+    // mongoURI: "mongodb://localhost/nodejscrashcoursedb"
   };
 }
