@@ -6,7 +6,7 @@
     <div class="card-body">
         <a href="/games/edit/{{id}}" class="btn btn-primary btn-block mb-2">Edit</a>
         <form method="POST" action="/games/{{id}}?_method=DELETE">
-            <input type="submit" class="btn btn-danger btn-block" value="Delete" />
+            <input type="submit" class="btn btn-danger btn-block mb-2" value="Delete" />
         </form>
     </div>
 </div>
@@ -15,3 +15,5 @@
     <p>No games found for user</p>
 </div>
 {{/each}}
+
+<a href="/games/add" class="btn btn-primary btn-block mb-2">Add new game</a>
